@@ -1,0 +1,190 @@
+.Account {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+}
+
+.Account > div {
+    border-radius: 8px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+
+    width: 90%;
+    height: 85%;
+
+    background-color: rgba(255, 255, 255, 0.0625);
+
+    backdrop-filter: blur(2px);
+}
+
+.Account > div > * {
+    padding: 0;
+    margin: 0;
+    width: 85%;
+    height: 6vh;
+    text-align: center;
+}
+
+.UsernameLabel {
+    font-weight: 600;
+    font-size: 2.5vh;
+
+    background-color: rgba(255, 255, 255, 0.125);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 4px;
+
+    transition: all 0.25s ease;
+}
+
+.UsernameLabel:hover {
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    cursor: pointer;
+}
+
+.QueryList {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.125);
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 4vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.QueryList > div {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    justify-content: center;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.125);
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+}
+
+.QueryList * {
+    transition: all 0.25s ease;
+}
+
+.QueryList > div > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.QueryList > div > div > img {
+    height: 6vh;
+    margin-left: 1vw;
+}
+
+.QueryList > div > div > header {
+    margin-top: 1vh;
+    margin-left: 1vw;
+
+    font-weight: 600;
+    font-size: 4vh;
+
+    flex: 1 1 auto;
+}
+
+.QueryList > div > div > p {
+    margin-left: 1.25vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.QueryList > div > div > p > img {
+    border-radius: 12px;
+    max-width: 12vw;
+    flex-basis: 100%;
+}
+
+.QueryList > div > div > p > *:not(img) {
+    height: 2.5vh;
+}
+
+.QueryList > section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 20vh;
+
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.QueryList > section > div > div {
+    position: relative;
+    width: 100%;
+}
+
+.QueryList > section > div > div > img {
+    position: absolute;
+    height: 4vh;
+    top: 45%;
+    transform: translateY(-50%);
+    width: auto;
+    right: 5.5%;
+    
+    transition: filter 0.25s ease;
+}
+
+.QueryList > section > div input {
+    height: 6vh;
+    font-size: 2vh;
+}
+
+.QueryList > section > div > div > img:hover {
+    cursor: pointer;
+    filter: brightness(1.25);
+}
+
+.QueryList > section > div * {
+    margin: 2px;
+    padding: 0;
+
+    font-size: 4vh;
+    text-align: center;
+
+    width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+    .QueryList > section > div > div > img {
+        right: 6%;
+    }
+}
