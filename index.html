@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>AceCademy</title>
+
+        <link rel="shortcut icon" href="./images/Favicon.svg" type="image/x-icon">
+
+        <link rel="stylesheet" href="./scripts/style/format.css">
+        <link rel="stylesheet" href="./scripts/style/style.css">
+
+        <script type="module" src="./scripts/account.js"></script>
+        <script type="module" src="./scripts/query.js"></script>
+        <script type="module" src="./scripts/api.js"></script>
+
+        <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js"></script>
+    </head>
+    <body>
+        <div class="Home">
+            <topbar>
+                <div onclick="location.reload()">
+                    <img src="./images/Favicon.svg">
+                    <span class="Header">AceCademy</span>
+                </div>
+                <vr></vr>
+                <div>
+                    <span class="UsernameLabel" id="UsernameLabel">Loading</span>
+                    <button class="AccountLinkButton" high>Log In</button>
+                    <button class="AccountLinkButton" highlight>Sign Up</button>
+                    <vr></vr>
+                    <button id="LogOutButton" highdark>Log Out</button>
+                </div>
+            </topbar>
+            <div class="QueryList">
+                <section id="PostSection" style="order: -999999999999999999999;">
+                    <div>
+                        <input autocomplete="off" id="TitleInput" placeholder="Title" type="search">
+                        <div>
+                            <img id="MediaButton" src="./images/Image.svg">
+                            <input autocomplete="off" id="ContentInput" placeholder="Content" type="search">
+                        </div>
+                        <select id="PostTypeInput">
+                            <option value="" selected>Select Type</option>
+                            <option value="Help">Help</option>
+                            <option value="Discuss">Discuss</option>
+                            <option value="Post">Post</option>
+                        </select>
+                        <button id="SendButton" highlight>Send</button>
+                    </div>
+                </section>
+                <i></i>
+            </div>
+        </div>
+        <div style="display: none;" class="Account">
+            <topbar>
+                <div onclick="location.reload()">
+                    <img src="./images/Favicon.svg">
+                    <span>AceCademy</span>
+                </div>
+            </topbar>
+            <div>
+                <input id="EmailInput" type="email" placeholder="E-Mail">
+                <input id="UsernameInput" type="text" placeholder="Username">
+                <input id="PasswordInput" type="password" placeholder="Password">
+                <button highlight id="SubmitButton">Log In</button>
+                <button highdark class="AccountUnlinkButton">Back</button>
+            </div>
+        </div>
+    </body>
+</html>
