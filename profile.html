@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Profile</title>
+
+        <link rel="shortcut icon" href="./images/Favicon.svg" type="image/x-icon">
+
+        <link rel="stylesheet" href="./scripts/style/format.css">
+        <link rel="stylesheet" href="./scripts/style/style.css">
+        <link rel="stylesheet" href="./scripts/style/profile.css">
+
+        <script type="module" src="./scripts/profile.js"></script>
+        <script type="module" src="./scripts/account.js"></script>
+        <script type="module" src="./scripts/api.js"></script>
+
+        <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js"></script>
+    </head>
+    <body>
+        <topbar>
+            <div>
+                <img class="UserProfileImage" src="">
+                <span class="UsernameLabel">Loading</span>
+                <button onclick="location.href = './index.html'" highdark>Return</button>
+            </div>
+        </topbar>
+        <div class="Options">
+            <section>
+                <header>Profile Image</header>
+                <div>
+                    <img class="UserProfileImage" src="./images/DefaultUser.svg">
+                    <input id="ProfileImageInput" type="file" accept="image/*">
+                    <button id="SaveChangesButton" highlight>SaveChanges</button>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
